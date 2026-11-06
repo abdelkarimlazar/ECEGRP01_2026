@@ -1,1 +1,151 @@
-bounjour
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hala Madrid – Site de fans du Real Madrid</title>
+<meta name="description" content="Histoire, légendes et stade du Real Madrid. Site de supporters.">
+<style>
+  :root {
+    --white: #ffffff;
+    --paper: #f6f5f1;
+    --navy: #0b1a3a;
+    --navy-soft: #3b4663;
+    --gold: #b8913a;
+    --line: #dcdad2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --white: #101a33;
+      --paper: #0b1429;
+      --navy: #f3f1ea;
+      --navy-soft: #aeb7cc;
+      --gold: #d9b25c;
+      --line: #263250;
+    }
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--paper); color: var(--navy);
+    font-family: Georgia, "Times New Roman", serif; line-height: 1.7;
+  }
+  h1, h2, h3, nav, .btn, label, button, .year, .tag {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 1.25rem; }
+  }
+  .hero p { max-width: 50ch; font-size: 1.15rem; color: var(--navy-soft); margin: 0 0 2rem; }
+  .btn {
+    display: inline-block; padding: .8rem 1.5rem; background: var(--navy); color: var(--white);
+    text-decoration: none; font-weight: 600; border: 0; border-radius: 6px; cursor: pointer; font-size: 1rem;
+  }
+
+  section { padding: 4.5rem 0; }
+  section h2 { font-size: 2rem; margin: 0 0 .5rem; letter-spacing: -.01em; }
+  .lead { color: var(--navy-soft); max-width: 56ch; margin: 0 0 2.5rem; }
+
+  /* Frise historique */
+  .timeline { list-style: none; margin: 0; padding: 0; border-left: 3px solid var(--gold); }
+  .timeline li { padding: 0 0 2rem 1.75rem; position: relative; }
+  .timeline li::before {
+    content: ""; position: absolute; left: -9px; top: .45rem; width: 15px; height: 15px;
+    background: var(--paper); border: 3px solid var(--gold); border-radius: 50%;
+  }
+  .year { font-weight: 800; font-size: 1.3rem; color: var(--gold); }
+  .timeline p { margin: .1rem 0 0; max-width: 60ch; }
+
+
+  .card { background: var(--white); border: 1px solid var(--line); border-top: 4px solid var(--gold); border-radius: 6px; padding: 1.25rem; }
+  .card h3 { margin: 0 0 .25rem; font-size: 1.1rem; }
+  .card p { margin: 0; font-size: .95rem; color: var(--navy-soft); }
+  .tag { font-size: .85rem; color: var(--gold); font-weight: 700; }
+
+  .match {
+    display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+    background: var(--white); border: 1px solid var(--line); border-radius: 6px;
+    padding: 1.25rem; margin-bottom: .75rem; font-family: system-ui, sans-serif;
+  }
+  .match span:last-child { color: var(--navy-soft); }
+
+  form { display: grid; gap: 1rem; max-width: 480px; }
+  label { display: grid; gap: .35rem; font-weight: 600; font-size: .95rem; }
+  input {
+    font: inherit; padding: .7rem .85rem; border: 1px solid var(--line);
+    border-radius: 6px; background: var(--white); color: var(--navy);
+  }
+
+  footer { background: var(--white); border-top: 3px solid var(--gold); padding: 2rem 0; font-size: .85rem; color: var(--navy-soft); }
+
+  @media (max-width: 640px) { nav ul { gap: 1rem; } .hero { padding: 4rem 0 3rem; } }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#">Hala Madrid</a>
+    <nav aria-label="Navigation principale">
+      <ul>
+        <li><a href="#histoire">Histoire</a></li>
+        <li><a href="#stade">Stade</a></li>
+        <li><a href="#legendes">Légendes</a></li>
+        <li><a href="#matchs">Matchs</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <h1>Hala<br>Madrid</h1>
+      <p>Le site des supporters du Real Madrid : l'histoire du club, son stade, ses légendes et les prochains matchs.</p>
+      <a class="btn" href="#histoire">Découvrir le club</a>
+    </div>
+  </div>
+
+  <section id="histoire">
+    <div class="wrap">
+      <h2>L'histoire du club</h2>
+      <p class="lead">Quelques dates qui ont fait le Real Madrid.</p>
+      <ol class="timeline">
+        <li><span class="year">1902</span><p>Le club est fondé à Madrid sous le nom de Madrid Football Club.</p></li>
+        <li><span class="year">1920</span><p>Le roi Alphonse XIII accorde au club le titre « Real », qui signifie « royal ».</p></li>
+        <li><span class="year">1947</span><p>Inauguration du stade Santiago-Bernabéu, du nom du président qui l'a fait construire.</p></li>
+        <li><span class="year">1956–1960</span><p>Le Real remporte les cinq premières Coupes d'Europe des clubs champions, d'affilée.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="stade" class="stadium">
+    <div class="wrap">
+      <div>
+        <h2>Le Santiago-Bernabéu</h2>
+        <p>Au cœur de Madrid, sur le Paseo de la Castellana, le Bernabéu accueille le club depuis 1947. Il a été rénové en profondeur ces dernières années. Ajoutez ici vos infos pratiques : accès en métro, visite du stade, boutique.</p>
+      </div>
+      <div class="photo" role="img" aria-label="Emplacement pour une photo du stade">Ajoutez votre photo du stade ici</div>
+    </div>
+  </section>
+
+  <section id="legendes">
+    <div class="wrap">
+      <h2>Les légendes</h2>
+      <p class="lead">Des joueurs qui ont marqué l'histoire du club. Complétez avec vos favoris.</p>
+      <div class="grid">
+        <article class="card"><span class="tag">Années 1950</span><h3>Alfredo Di Stéfano</h3><p>Moteur de l'équipe des cinq Coupes d'Europe.</p></article>
+        <article class="card"><span class="tag">Années 1950–60</span><h3>Francisco Gento</h3><p>Ailier gauche, pilier de cette même génération.</p></article>
+        <article class="card"><span class="tag">Années 1990–2000</span><h3>Raúl</h3><p>Attaquant et capitaine, symbole du club.</p></article>
+  .grid { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); }
+  }
+    font-size: .9rem; text-align: center; padding: 1rem;
+    display: grid; place-items: center; color: var(--navy-soft); font-family: system-ui, sans-serif;
+  .stadium { background: var(--white); border-block: 1px solid var(--line); }
+    aspect-ratio: 4 / 3; background: var(--paper); border: 1px dashed var(--line); border-radius: 6px;
+  .stadium .wrap { display: grid; gap: 2.5rem; }
+  @media (min-width: 800px) { .stadium .wrap { grid-template-columns: 1fr 1fr; align-items: center; } }
+  .photo {
+  .btn:hover { background: var(--gold); color: #0b1a3a; }
+    letter-spacing: -.04em; font-weight: 800;
+
